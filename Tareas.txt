@@ -1,9 +1,12 @@
 Tareas a hacer:
 [PÁGINA PRINCIPAL]
+(Andrea)
 - Bajar el menú y ponerlo centrado
 - Poner la búsqueda
 - Añadir enlaces en el menú
 - Añadir RRSS
+
+(Mara)
 - Cambiar colores menú
 - Centrar el banner (ponerlo más bonito)
 - Añadir espacio entre recetas
