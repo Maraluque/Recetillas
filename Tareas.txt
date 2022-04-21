@@ -1,6 +1,6 @@
 Tareas a hacer:
 [PÁGINA PRINCIPAL]
-(Andrea)
+(Andrea D)
 - Bajar el menú y ponerlo centrado
 - Poner la búsqueda
 - Añadir enlaces en el menú
