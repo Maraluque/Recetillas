@@ -1,0 +1,10 @@
+Tareas a hacer:
+[PÁGINA PRINCIPAL]
+- Bajar el menú y ponerlo centrado
+- Poner la búsqueda
+- Añadir enlaces en el menú
+- Añadir RRSS
+- Cambiar colores menú
+- Centrar el banner (ponerlo más bonito)
+- Añadir espacio entre recetas
+- Añadir pie de página (cookies y cosas varias)
