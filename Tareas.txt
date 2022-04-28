@@ -1,13 +1,14 @@
 Tareas a hacer:
 [PÁGINA PRINCIPAL]
 (Andrea D)
-- Bajar el menú y ponerlo centrado
-- Poner la búsqueda
 - Añadir enlaces en el menú
-- Añadir RRSS
+- Banner terminar
+- Añadir enlaces RRSS
+- Hacer que funcione el botón de búsqueda
 
 (Mara)
 - Cambiar colores menú
-- Centrar el banner (ponerlo más bonito)
 - Añadir espacio entre recetas
-- Añadir pie de página (cookies y cosas varias)
+- Página de cookies, aviso legal...
+- Añadir enlace de logo a Home
+- Ir creando páginas de recetas
