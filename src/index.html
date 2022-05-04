@@ -16,7 +16,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="css/style.css" rel="stylesheet">
-
+    
 </head>
 
 <body>
@@ -359,7 +359,10 @@
         </div>
     </div>
     <div id="closepage" role="contentinfo">
-        <p> <center> &hearts; &copy; 2022 Recetillas - Todos los derechos reservados 😇 <a href="terminos-de-uso.html">Términos de uso</a> · <a href="politica-de-privacidad.html">Política de privacidad</a> · <a href="politica-de-cookies.html">Política de cookies</a> &hearts; </center> <br /></p>
+        <p> <center> &hearts; &copy; 2022 Recetillas - Todos los derechos reservados 😇 <a href="terminos-de-uso.html">Términos de uso</a> · <a href="politica-de-privacidad.html">Política de privacidad</a> ·
+    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Política de Cookies
+    </button> &hearts; </center> <br /></p>
 
     </div>
     <script src="js/jquery.min.js"></script>
@@ -368,3 +371,46 @@
 </body>
 
 </html>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog" style="max-width: 1000px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Política de Cookies</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table>
+        <tr>
+            <th>
+                Política de cookies de Recetillas.com
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <p> ¡Bienvenido a Recetillas! </p>
+                <p> Por favor, acepta el uso de cookies para tener la mejor experiencia en nuestro sitio. </p>
+                <p> Con su acuerdo, nosotros y nuestros socios usamos cookies o tecnologías similares para almacenar, acceder y procesar datos personales como su visita en este sitio web. Puede retirar su consentimiento u oponerse al procesamiento de datos basado en intereses legítimos en cualquier momento dando clic en “Configuración” en nuestra Política de privacidad en este sitio web. </p>
+                <p> Nosotros y nuestros socios hacemos el siguiente tratamiento de datos: </p>
+                <list>
+                    <ul>
+                        <li> Almacenar o acceder a información en un dispositivo. </li>
+                        <li> Anuncios y contenido personalizados, medición de anuncios y del contenido, información sobre el público y desarrollo de productos. </li>
+                        <li> Datos de localización geográfica precisa. </li>
+                        <li> Identificación mediante las características de dispositivos </li>
+                    </ul>
+                </list>
+            </td>
+        </tr>
+    </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar Cookies</button>
+      </div>
+    </div>
+  </div>
+</div>
