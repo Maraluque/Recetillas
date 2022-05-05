@@ -53,3 +53,18 @@
     display: inline-block;
     vertical-align: top;
 }
+
+.carrusel {
+    margin-left: 5px;
+    display: inline-block;
+    text-align: left;
+}
+
+.carousel-caption {
+    position: absolute; 
+    left:0.2%;
+    right:52%;
+
+    text-align: left;
+   /*x background-color: rgba(0, 0, 0, 0.5); /* Añadir para conseguir el fondo con opacidad */
+}
