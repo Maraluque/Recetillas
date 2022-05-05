@@ -4,6 +4,8 @@ Tareas a hacer:
 - Añadir enlaces en el menú
 - Banner terminar (listo)
 - Añadir enlaces RRSS (listo)
+-Recetas del home (listo)
+-Historia de las recetas del home (sólo hice las mexicanas me faltan las españolas)
 - Hacer que funcione el botón de búsqueda
 
 (Mara)
