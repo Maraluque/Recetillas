@@ -2,13 +2,15 @@ Tareas a hacer:
 [PÁGINA PRINCIPAL]
 (Andrea D)
 - Añadir enlaces en el menú
-- Banner enlances a recetas
--crear redes y modificar el link de estas
+- Banner terminar (listo)
+- Añadir enlaces RRSS (listo)
+-Recetas del home (listo)
+-Historia de las recetas del home (sólo hice las mexicanas me faltan las españolas)
 - Hacer que funcione el botón de búsqueda
--Crear página recetas mexicanas
--Crear página nosotros
 
 (Mara)
 - Cambiar colores menú
 - Añadir espacio entre recetas
-- Ir creando páginas de recetas españolas
+- Página de cookies, aviso legal... (listo)
+- Añadir enlace de logo a Home (listo)
+- Ir creando páginas de recetas
