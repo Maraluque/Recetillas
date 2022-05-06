@@ -6,6 +6,7 @@ Tareas a hacer:
 -crear redes y modificar el link de estas
 - Hacer que funcione el botón de búsqueda
 -Crear página recetas mexicanas
+-Crear página nosotros
 
 (Mara)
 - Cambiar colores menú
