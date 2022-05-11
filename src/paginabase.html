@@ -18,7 +18,39 @@
     <link href="css/style.css" rel="stylesheet">
     <script type="js/scripts.js"></script>
     <script type="js/dataTables.min.js"></script>
+    <style>
+        #receta{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
+        #receta > #imagen {
+            width: 30%;
+        }
+        #receta > #ingredientes{
+            width: 70%;
+            background-color: #FCA8A8;
+            border: 1px solid grey;
+        }
+        #elaboracion{
+            background-color: #D6C2BE;
+            margin-top: 15px;
+            border: 1px solid grey;
+        }
+        #foto, #video{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            width: 80%;
+        }
+        ul{
+            margin-left: 20px;
+        }
+        h4{
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -62,6 +94,7 @@
                     </div>
                 </div>
                 <div class="dropdown-divider"></div>
+                <!--MENÚ-->
                 <div class="row">
                     <center>
                         <div class="col-md-6" style="display: flex;justify-content: center;align-items: center;">
@@ -198,9 +231,34 @@
 				</div>-->
                 </div>
                 <div class="dropdown-divider"></div>
+                <h2> <center> Receta de Salmorejo </center> </h2>
+                <div id="receta">
+                    <div id="imagen">
+                        <img id="foto"alt="Foto de Salmorejo" src="img/Salmorejo.png">
+                         <div class="dropdown-divider"></div>
+                        <video id="video" src="https://www.youtube.com/watch?v=GTevjjAQrHw" controls>
+                    </div>
+                    <div id="ingredientes">
+                        <list>
+                            <h4> Ingredientes de la receta: </h4>
+                            <ul>
+                                <li>Para 6 personas </li>
+                                <li>1 kg Tomate </li>
+                                <li>200 g Pan de hogaza preferiblemente de Telera cordobesa </li>
+                                <li>150 ml Aceite de oliva virgen extra </li>
+                                <li>1 Diente de ajo </li>
+                                <li>Sal al gusto </li>
+                            </ul>
+                        </list>
+                    </div>
+                </div>
+                <div id="elaboracion">
+                    pichulin
+                </div>
             </div>
         </div>
     </div>
+    <div class="dropdown-divider"></div>
     <div id="closepage" role="contentinfo">
         <p>
         	<center>
