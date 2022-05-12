@@ -2,10 +2,11 @@ Tareas a hacer:
 [PÁGINA PRINCIPAL]
 (Andrea D)
 - Añadir enlaces en el menú
-- Banner terminar (listo)
+- Banner (sólo falta los enlances a las recetas)
 - Añadir enlaces RRSS (listo)
 -Recetas del home (listo)
--Historia de las recetas del home (sólo hice las mexicanas me faltan las españolas)
+-Páginas de recetas pozole y guacamole(listo)
+-Historia de las recetas del home (listo)
 - Hacer que funcione el botón de búsqueda
 
 (Mara)
