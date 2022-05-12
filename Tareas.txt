@@ -5,7 +5,7 @@ Tareas a hacer:
 - Banner (sólo falta los enlances a las recetas)
 - Añadir enlaces RRSS (listo)
 -Recetas del home (listo)
--Páginas de recetas pozole y guacamole(listo)
+-Páginas de recetas pozole, guacamole, tacos ,tamales y chilaquiles(listo)
 -Historia de las recetas del home (listo)
 - Hacer que funcione el botón de búsqueda
 
