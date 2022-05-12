@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Recetillas</title>
+
+    <meta name="description" content="Recetas tradicionales de México y España">
+    <meta name="author" content="María de las Maravillas y Andrea">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="js/scripts.js"></script>
+    <script type="js/dataTables.min.js"></script>
+    <style>
+        #receta{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #receta > #imagen {
+            width: 30%;
+        }
+        #receta > #ingredientes{
+            width: 70%;
+            background-color: #FCA8A8;
+            border: 1px solid grey;
+        }
+        #elaboracion{
+            background-color: #D6C2BE;
+            margin-top: 15px;
+            border: 1px solid grey;
+        }
+        #foto{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            width: 90%;
+        }
+        ul{
+            margin-left: 25px;
+        }
+        h4{
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+	
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="index.html"> <img alt="Logo Recetillas.com" src="img/logo.png" class="rounded-circle" width="150px" height="150px">
+                        </a>
+                    </div>
+                    <div class="col-md-4 justify-content-end" style="display: flex;justify-content: center;align-items: center;">
+                        <div class="input-group">
+                            <input type="text" id="txtFiltro" class="form-control" placeholder="Buscar Receta..." autocomplete="off" />
+                            <button class="btn btn-outline-light" type="button">
+							<i class="bi bi-search"></i>
+							</button>							
+                        </div>
+                    </div>
+                    <div class="col-md-4 justify-content-end" style="display: flex;justify-content: center;align-items: center;">
+                        
+                        <div>
+                            <button class="btn btn-outline-light" type="button">
+						<a href="https://www.facebook.com" class="bi bi-facebook" ></a>	
+						
+						</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-light" type="button">
+						<a href="https://www.instagram.com" class="bi bi-instagram" ></a>	
+
+						</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-light" type="button">
+						<a href="https://www.twitter.com" class="bi bi-twitter"></a>					
+
+						</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <!--MENÚ-->
+                <div class="row">
+                    <center>
+                        <div class="col-md-6" style="display: flex;justify-content: center;align-items: center;">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item dropdown ml-md-auto">
+                                    <a class="btn btn-danger mx-1" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item dropdown ml-md-auto">
+                                    <a class="btn btn-danger dropdown-toggle mx-1" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Recetas</a>
+                                    <div class="dropdown-menu dropdown-menu-right" id="menuRecetas" onclick="cambio()">
+                                        <div class="row">
+                                            <ul class="col-md-4 justify-content-start" id="primeraParte">
+                                                <a class="textoEstilos dropdown-item">
+													Arroz
+													<img class="imagenEstilos" height="23px" width="23px" src="img/arroz.png"/>
+												</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+													Pasta
+													<img class="imagenEstilos" height="23px" width="23px" src="img/espaguetis.png"/>
+												</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+													Carne
+													<img class="imagenEstilos" height="23px" width="23px" src="img/carne.png"/>
+												</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Pollo
+                                            	<img class="imagenEstilos" height="23px" width="23px" src="img/pollo.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Embutido
+												<img class="imagenEstilos" height="23px" width="23px" src="img/embutido.png"/>
+                                            	</a>
+                                                <div class="dropdown-divider"></div>
+                                            </ul>
+                                            <ul class="col-md-4 justify-content-center">
+                                                <a class="dropdown-item" href="#">
+                                                México
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/mexico.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                España
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/españa.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Pescados Y Mariscos
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/pescado.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Maíz
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/maiz.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Eventos especiales
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/copas.png"/>
+                                            	</a>
+                                                <div class="dropdown-divider"></div>
+                                            </ul>
+                                            <ul class="col-md-4 justify-content-end">
+                                                <a class="dropdown-item" href="#">
+                                                Bebidas
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/bebida.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Postres
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/postre.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Puntaje
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/puntaje.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Sopas
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/sopa.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                Entradas
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/entrada.png"/>
+                                            	</a>
+                                                <div class="dropdown-divider"></div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown ml-md-auto">
+                                    <a class="btn btn-danger dropdown-toggle mx-1" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Recetas por países</a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#">
+                                                México
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/mexico.png"/>
+                                            	</a>
+
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">
+                                                España
+                                                <img class="imagenEstilos" height="23px" width="23px" src="img/españa.png"/>
+                                            	</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-danger mx-1" href="#">Nosotros</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </center>
+                    <!--<div class="col-md-3">
+					 <a href="#" class="btn btn-secondary active disabled btn-block btn-sm" type="button">Button</a> 
+					<button type="button" class="btn btn-success btn-block btn-sm">
+						Button
+					</button>
+				</div>-->
+                </div>
+                <div class="dropdown-divider"></div>
+                <h2> <center> Receta Guacamole </center> </h2>
+                <div id="receta">
+                    <div id="imagen">
+                        <img id="foto" src="img/pozole.png">
+                         <div class="dropdown-divider"></div>
+
+                         <iframe width="380" height="200" src="https://www.youtube.com/embed/8kiBEsAMFr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                      
+                    </div>
+                    <div id="ingredientes">
+                        <list>
+                            <h4>Receta para 4 personas</h4>
+                            <h4>Ingredientes de la receta:</h4>
+                            <ul> 
+                                <h5>Para la sopa:</h5>                               
+                                <li>4 litros de agua</li>
+                                <li>1 kilo de carne de puerco cortada en cubos</li>
+                                <li>½ kilo de costilla de puerco cortada en trozos</li>
+                                <li>3 latas de maíz para pozole (Enjuagado y escurrido) </li>
+                                <li>1 cebolla blanca cortada en cuatro partes</li>
+                                <li>8 dientes de ajo grandes</li>
+                                <li>Sal al gusto </li>
+
+                                <h5>Para la salsa:</h5>                       
+                                <li>5 chiles anchos limpios (sin semillas y desvenados)</li>
+                                <li>5 chiles guajillo limpios (sin semillas y desvenados)</li>
+                                <li>6 dientes de ajo</li>
+                                <li>½ cebolla mediana (picadita)</li>
+                                <li>2 cucharadas soperas de aceite vegetal</li>
+                                <li>½ cucharadita cafetera de orégano mexicano</li>
+                                <li>Sal al gusto </li>
+
+                                <h5>Para la guarnición:</h5>                       
+                                <li>1 lechuga finamente picada</li>
+                                <li>1 ½ taza de cebolla blanca finamente picada</li>
+                                <li>1 ½ taza de rábanos finamente rebanados</li>
+                                <li>Chile piquín recién molido al gusto</li>
+                                <li>Orégano mexicano al gusto para sazonar</li>
+                                <li>Tortillas doradas ó tostadas de paquete</li>
+                                <li>Limones cortados en cuartos</li>
+                                <li>Aguacate cortado en cubos</li>
+                            </ul>
+                        </list>
+                    </div>
+                </div>
+                <div id="elaboracion">
+                	<h4>Elaboración de la receta</h4>
+                	<li>Pon el agua a calentar en una olla grande. Agrega la cebolla, el ajo, la sal, la carne y las costillas. Deja que suelte el hervor y después baja la flama para que se cocine la carne por aproximadamente 2 horas y media, o hasta que ésta se despegue del hueso.</li>
+                    <li>Mientras se cuece la carne, remueve con un cucharón la capa de espuma y grasa que se vaya formando en la superficie del caldo. Si es necesario agrega más agua caliente para mantener el mismo nivel de caldo en la olla.</li>
+                    <li>Cuando la carne se cueza, sepárala del caldo. Quítale al caldo el exceso de grasa, los huesos de las costillas, la cebolla y el ajo.</li>
+                    <li>Para preparar la salsa, remoja los chiles anchos y guajillo durante 25 minutos en suficiente agua que los cubra.</li>
+                	<li>Una vez que los chiles estén blandos, escúrrelos y colócalos en la licuadora junto con el ajo, la cebolla y el orégano, agregando un poco del agua donde se remojaron éstos. Licua hasta que tenga la consistencia de una salsa suave.</li>
+                	<li>Calienta el aceite en un sartén a temperatura media alta; agrega la salsa, y sazona con sal al gusto. (Revuelve constantemente, ya que tiende a brincar). Reduce la flama y hierve a fuego lento por aprox. 25 minutos.</li>
+                	<li>Agrega la salsa al caldo pasándola primero por un colador. Deja que suelte el hervor y agrega la carne. Hierve a fuego bajo por aprox. 10 minutos. Agrega el maíz y sazona con sal y pimienta. Sigue cocinando hasta que el maiz este cocido completamente.</li>
+                	<li>Sirve el pozole en plato hondo y coloca la guarnición a un lado como se muestra en la foto.</li>
+                	<li>¡DISFRUTAMOS!</li>
+                </div>
+
+<!--RECOMENDACIONES-->
+				<h2> <center> Recomendaciones de otras recetas mexicanas</center> </h2>
+					<div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <!--CAMBIAR LA URL POR LA PÁGINA DE LA RECETA-->
+                                    <a href="recetaGuacamole.html">
+                                       	<img class="card-img-top" href="recetaGuacamole.html" alt="Bootstrap Thumbnail First" src="img/guacamole.jpg">
+                                    </a>
+                                    <div class="card-block">
+                                        <h5 class="card-title">Guacamole</h5>                                                
+                                            <p>
+                                               	<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#HistoriaPozole">Historia</button><a>Puntuación:★★★★/5 </a>                 
+                                            </p>
+                                    </div>
+                            </div>
+                        </div>
+                    <div class="col-md-4">
+                                        
+                   	<div class="card">
+                    <!--CAMBIAR LA URL POR LA PÁGINA DE LA RECETA-->
+                        <a href="recetaChileNogada.html">
+                            <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="img/ChileNogada.png">
+                                            </a>
+                                            <div class="card-block">
+                                                <h5 class="card-title">Chile en Nogada</h5>                                                
+                                                <p>
+                                                	<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#HistoriaChileNogada">Historia</button><a>Puntuación:★★★/5 </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                        	<!--CAMBIAR LA URL POR LA PÁGINA DE LA RECETA-->
+                                        	<a href="https://www.google.es/">
+                                            	<img class="card-img-top" alt="Bootstrap Thumbnail Third" src="img/chilaquiles.jpg">
+                                            </a>
+                                            <div class="card-block">
+                                                <h5 class="card-title">
+                                                    Chilaquiles
+                                                </h5>
+                                                <p>
+                                                	<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#HistoriaChilaquiles">Historia</button><a>Puntuación:★★★★★/5 </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="dropdown-divider"></div>
+    <div id="closepage" role="contentinfo">
+        <p>
+        	<center>
+        		&hearts; &copy; 2022 Recetillas - Todos los derechos reservados 😇 ·
+        		<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+		    	Política de Privacidad
+		    	</button>
+
+			    <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			    Política de Cookies
+			    </button> &hearts; </center> <br />
+		</p>
+
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog" style="max-width: 1000px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Política de Cookies</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table>
+        <tr>
+            <th>
+                Política de Cookies de Recetillas.com
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <p> ¡Bienvenido a Recetillas! </p>
+                <p> Por favor, acepta el uso de cookies para tener la mejor experiencia en nuestro sitio. </p>
+                <p> Con su acuerdo, nosotros y nuestros socios usamos cookies o tecnologías similares para almacenar, acceder y procesar datos personales como su visita en este sitio web. Puede retirar su consentimiento u oponerse al procesamiento de datos basado en intereses legítimos en cualquier momento dando clic en “Configuración” en nuestra Política de privacidad en este sitio web. </p>
+                <p> Nosotros y nuestros socios hacemos el siguiente tratamiento de datos: </p>
+                <list>
+                    <ul>
+                        <li> Almacenar o acceder a información en un dispositivo. </li>
+                        <li> Anuncios y contenido personalizados, medición de anuncios y del contenido, información sobre el público y desarrollo de productos. </li>
+                        <li> Datos de localización geográfica precisa. </li>
+                        <li> Identificación mediante las características de dispositivos </li>
+                    </ul>
+                </list>
+            </td>
+        </tr>
+    </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Aceptar Cookies</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog" style="max-width: 1000px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Política de Privacidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table>
+        <tr>
+            <th>
+                Política de Privacidad de Recetillas.com
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <p> ¡Bienvenido a Recetillas! </p>
+                <p> Clases de Datos recogidos </p>
+<p> Entre las clases de Datos Personales que recoge esta Página Web, ya sea directamente o a través de terceros, se encuentran: dirección de correo electrónico; nombre; página web; Datos de uso; Cookies.
+La información completa referente a cada categoría de Datos Personales que se recogen se proporciona en las secciones de la presente política de privacidad dedicadas a tal fin o mediante textos explicativos específicos que se muestran antes de la recogida de dichos Datos. </p>
+<p> Los Datos Personales podrán ser proporcionados libremente por el Usuario o, en caso de los Datos de Uso, serán recogidos automáticamente cuando se utilice esta Página Web. </p>
+<p> Todos los Datos solicitados por esta Página Web son obligatorios y la negativa a proporcionarlos podrá imposibilitar que esta Página Web pueda proceder a la prestación del servicio. En los casos en los que esta Página Web indique específicamente que ciertos Datos no son obligatorios, los Usuarios serán libres de no comunicar tales Datos sin que esto tenga consecuencia alguna sobre la disponibilidad o el funcionamiento del Servicio. Los Usuarios que tengan dudas sobre qué Datos son obligatorios pueden contactar con el Titular. </p>
+<p> El uso de Cookies - o de otras herramientas de seguimiento - por parte de esta Página Web o por los titulares de servicios de terceros utilizados por esta Página Web tiene como finalidad la prestación del Servicio solicitado por el Usuario, además de cualesquiera otras finalidades que se describan en el presente documento y en la Política de Cookies, en caso de estar disponible.
+El Usuario asume la responsabilidad respecto de los Datos Personales de terceros que se obtengan, publiquen o compartan a través de esta Página Web y declara por la presente que tiene el consentimiento de dichos terceros para proporcionar dichos Datos al Titular. </p>
+
+                
+            </td>
+        </tr>
+    </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="HistoriaPozole" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog" style="max-width: 1000px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Historia del pozole</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+		<div class="modal-body">
+        <table>
+        <tr>
+            <th>
+                HISTORIA DEL POZOLE
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+                <p> La historia explica que el pozole se trataba de una ofrenda gastronómica que estaba dirigida para el dios de la primavera, a quien se le pedía un tiempo de buenas cosechas. Cronistas señalan que el maíz era preparado con carne humana, por lo que era un alimento sagrado y de gran significado. </p>
+                <p>Los guerreros se daban a la tarea de capturar a un enemigo, quien era llevado al Templo Mayor para su sacrificio. En el lugar, altos mandos se encargaban de sacarle el corazón, que se ofrecía al dios ya mencionado. No obstante, partes del cuerpo se tomaban para preparar el pozole; el muslo se utilizaba para cocinar el maíz que comería el emperador Moctezuma, mientras que los brazos eran destinados para el guerrero que había capturado a la víctima, así como para su familia. El maíz era cocido en agua con las partes del cuerpo humano y su consumo estaba relacionado con el poder y fuerza. </p>
+                <p>en el año de 1530, el conquistador español Nuño Beltrán de Guzmán llegó a Tonalá, Jalisco, donde fue recibido por la líder Itzoapilli Tzapotzintli, quien le ofreció una olla pozolera donde se encontraban la carne humana. Al ver los restos humanos guisados, el español rompió la olla y exhortó a la comunidad a no consumir carne humana. Fue así que la receta del antiguo pozole se modificó y actualmente, en nuestras fiestas patrias, se disfruta con carne de puerco, pollo o vegetariano con hongos o flor de calabaza.</p>
+                
+            </td>
+        </tr>
+    </table>
+      </div>  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>                               
+</div>
+
+
+<!--Guacamole-->
+<div class="modal fade" id="HistoriaChileNogada" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog" style="max-width: 1000px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Historia del guacamole</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+		<div class="modal-body">
+        <table>
+        <tr>
+            <th>
+                HISTORIA DEL GUACAMOLE
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+                <p> </p>
+                <p></p>
+                <p></p>
+                
+            </td>
+        </tr>
+    </table>
+      </div>  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>                               
+</div>
+
+
+<!--Chilaquiles-->
+<div class="modal fade" id="HistoriaChilaquiles" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+  <div class="modal-dialog" style="max-width: 1000px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Historia de los chilaquiles</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+		<div class="modal-body">
+        <table>
+        <tr>
+            <th>
+                HISTORIA DE LOS CHILAQUILES
+            </th>
+        </tr>
+        <tr>
+            <td>
+                
+                <p> Los chilaquiles son un plato típico mexicano elaborado a base de tortillas cortadas, fritas o tostadas, que se cocinan en una salsa picante que es roja o verde dependiendo del tipo de chile usado, tiene multitud de variantes regionales pudiendo contener otros ingredientes como carne de pollo o de res deshilachado, arrachera, carne enchilada, cecina, chorizo, huevos al gusto, quesillo, queso manchego, queso fresco, crema, cebolla, aguacate, entre muchos otros. Se suele aromatizar con cilantro o epazote y se suelen acompañar con guarnición de frijoles.</p>
+
+                <p>Se trata de un platillo sencillo de elaborar y muy popular en toda la República mexicana, además de altamente calórico. Es un desayuno tradicional mexicano, aunque también es común consumirlo en otras comidas del día. En la cultura mexicana, el desayuno es una de las comidas más importantes del día, o tal vez la que más.​</p>                
+            </td>
+        </tr>
+    </table>
+      </div>  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>                               
+</div>
+
