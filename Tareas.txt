@@ -10,8 +10,8 @@ Tareas a hacer:
 - Hacer que funcione el botón de búsqueda
 
 (Mara)
-- Cambiar colores menú
-- Añadir espacio entre recetas
+- Cambiar colores menú (listo)
+- Añadir espacio entre recetas (listo)
 - Página de cookies, aviso legal... (listo)
 - Añadir enlace de logo a Home (listo)
-- Ir creando páginas de recetas
+- Ir creando páginas de recetas (listo)
