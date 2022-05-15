@@ -1,17 +1,2 @@
 Tareas a hacer:
-[PÁGINA PRINCIPAL]
-(Andrea D)
-- Añadir enlaces en el menú
-- Banner (sólo falta los enlances a las recetas)
-- Añadir enlaces RRSS (listo)
--Recetas del home (listo)
--Páginas de recetas pozole, guacamole, tacos ,tamales y chilaquiles(listo)
--Historia de las recetas del home (listo)
-- Hacer que funcione el botón de búsqueda
-
-(Mara)
-- Cambiar colores menú (listo)
-- Añadir espacio entre recetas (listo)
-- Página de cookies, aviso legal... (listo)
-- Añadir enlace de logo a Home (listo)
-- Ir creando páginas de recetas (listo)
+TODO LISTO
